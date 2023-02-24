@@ -20,12 +20,14 @@ const ProductList = () => {
         }
     });
     //convert result into json
+    console.log('row redult',result)
     result = await result.json();
     //set result in product state
+    
     setProducts(result);
   };
 
-  console.warn(products);
+  // console.warn('anas check',products);
 
 
   //calling delete APi in Delete Button
@@ -60,7 +62,7 @@ const ProductList = () => {
   }else{
     getproducts();
   }
-  }  
+  };
 
 
 

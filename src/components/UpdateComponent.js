@@ -18,7 +18,9 @@ const UpdateComponent = () => {
     console.warn(params);
     let result = await fetch(`http://localhost:5000/product/${params.id}`, {
       headers: {
-        authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
+        // authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
+        // authorization: `bearer ${JSON.stringify(localStorage.getItem('token'))}`
+        authorization:`bearer ${JSON.parse(localStorage.getItem("token"))}`
       },
     });
     result = await result.json();
